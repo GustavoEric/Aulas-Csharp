@@ -21,7 +21,8 @@ namespace AppIMC
         {
             float imc;
             imc = float.Parse(txbPeso.Text) / (float.Parse(txbAltura.Text) * float.Parse(txbAltura.Text));
-            MessageBox.Show("Seu IMC é: " + imc);
+            lbIMC.Visible = true;
+            lbIMC.Text = imc.ToString();
         }
 
         private void btMostrarTabela_Click(object sender, EventArgs e)
