@@ -3,6 +3,7 @@
 
 void calculoTintas(double tam){
     double litros = tam / 6;
+    double valorTotal;
     int latas = 0, galoes = 0,apenas_galoes = 0,apenas_latas = 0;
 
     printf("Litros necessários: %.2f\n", litros);
@@ -14,13 +15,20 @@ void calculoTintas(double tam){
 	galoes = ceil(sobra / 3.6); 
     printf("\nsituação 1\n");
     printf("Total de Latas (18L): %d\n", apenas_latas);
+    valorTotal = apenas_latas *80;
+    printf("Valor total: R$%.2f\n " , valorTotal);
     
     printf("\nsituação 2\n");
     printf("Total de Latas (18L): %d\n", apenas_galoes);
+    valorTotal = apenas_galoes *25;
+    printf("Valor total: R$%.2f\n " , valorTotal);
     
 	printf("\nsituação 3\n");
     printf("Total de Latas (18L): %d\n", latas);
     printf("Total de Galões (3.6L): %d\n", galoes);
+    valorTotal = galoes *25;
+    valorTotal+= latas*80;
+    printf("Valor total: R$%.2f\n " , valorTotal);
 }
 
 int main(void){
